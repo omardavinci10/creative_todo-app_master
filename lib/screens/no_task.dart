@@ -1,18 +1,20 @@
 import 'package:creative_app/constantes/styles.dart';
+import 'package:creative_app/widgets/my_appbar.dart';
 import 'package:creative_app/widgets/navigator_button.dart';
 import 'package:creative_app/widgets/plus_button.dart';
 import 'package:flutter/material.dart';
 
 class NoTask extends StatelessWidget {
-  const NoTask({Key? key}) : super(key: key);
-
+  var intIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(90),
+        child: myAppBar(),
+      ),
       body: Center(
         child: Container(
-          color: Colors.red,
           width: MediaQuery.of(context).size.width / 1.2,
           child: Column(
             children: [
@@ -52,7 +54,9 @@ class NoTask extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: PlusButton(),
-      bottomNavigationBar: NavigatorButton(),
+      bottomNavigationBar: NavigatorButton(
+        intIndex: intIndex,
+      ),
     );
   }
 }

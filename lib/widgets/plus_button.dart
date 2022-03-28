@@ -12,14 +12,19 @@ class PlusButton extends StatelessWidget {
       backgroundColor: MyColors.trashRed,
       elevation: 5,
       child: Container(
-        child: Icon(
-          Icons.add,
-          size: 30,
+        child: Container(
+          child: Image.asset(
+            'assets/images/fab-add.png',
+          ),
         ),
+        // child: Icon(
+        //   Icons.add,
+        //   size: 30,
+        // ),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
-          boxShadow: [boxShadow],
+          boxShadow: [boxShadow(MyColors.purpleShadow)],
           borderRadius: BorderRadius.circular(50),
           gradient: LinearGradient(
             begin: Alignment.topLeft,

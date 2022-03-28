@@ -10,9 +10,11 @@ const TextStyle subTitle = TextStyle(
     color: MyColors.textBody,
     fontFamily: 'opensans');
 
-const BoxShadow boxShadow = BoxShadow(
-  color: MyColors.greenShadow,
-  blurRadius: 15,
-  spreadRadius: 8,
-  offset: Offset(3, 3),
-);
+BoxShadow boxShadow(Color myColor) {
+  return BoxShadow(
+    color: myColor,
+    blurRadius: 15,
+    spreadRadius: 8,
+    offset: Offset(3, 3),
+  );
+}

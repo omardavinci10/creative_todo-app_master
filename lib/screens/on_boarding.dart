@@ -30,7 +30,7 @@ class OnBoarding extends StatelessWidget {
                     Text('Reminders made simple', style: title),
                     SizedBox(height: 15),
                     Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque erat in blandit luctus.',
+                      'Notes is an intuitive, lightweight notepad application that allows you to capture and organize your ideas. Supports import/export, pattern screen lock features.',
                       style: subTitle,
                       textAlign: TextAlign.center,
                     ),
@@ -44,7 +44,7 @@ class OnBoarding extends StatelessWidget {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => NoTask(),
+                        builder: (context) => NoTask(),
                       ),
                     );
                   },
@@ -69,7 +69,7 @@ class OnBoarding extends StatelessWidget {
                       ),
                       borderRadius: BorderRadius.circular(8),
                       boxShadow: [
-                        boxShadow,
+                        boxShadow(MyColors.greenShadow),
                       ],
                     ),
                   ),
