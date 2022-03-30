@@ -3,17 +3,12 @@ import 'package:creative_app/screens/myhome_page.dart';
 import 'package:creative_app/screens/mytask_page.dart';
 import 'package:flutter/material.dart';
 
-class NavigatorButton extends StatefulWidget {
+class NavigatorButton extends StatelessWidget {
   final int intIndex;
-
-  const NavigatorButton({Key? key, required this.intIndex}) : super(key: key);
-
-  @override
-  State<NavigatorButton> createState() => _NavigatorButtonState();
-}
-
-class _NavigatorButtonState extends State<NavigatorButton> {
-  int currentIndex = 0;
+  final BuildContext context;
+  const NavigatorButton(
+      {Key? key, required this.intIndex, required this.context})
+      : super(key: key);
 
   void onTaped(int index) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
@@ -29,7 +24,7 @@ class _NavigatorButtonState extends State<NavigatorButton> {
       selectedItemColor: MyColors.blueDark,
       unselectedFontSize: 10,
       type: BottomNavigationBarType.fixed,
-      currentIndex: currentIndex,
+      currentIndex: intIndex,
       onTap: onTaped,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
@@ -37,7 +32,7 @@ class _NavigatorButtonState extends State<NavigatorButton> {
             margin: EdgeInsets.only(bottom: 5),
             child: Image.asset(
               'assets/images/home.png',
-              color: currentIndex == 0 ? MyColors.blueDark : MyColors.textGrey,
+              color: intIndex == 0 ? MyColors.blueDark : MyColors.textGrey,
             ),
           ),
           label: 'Home',
@@ -47,7 +42,7 @@ class _NavigatorButtonState extends State<NavigatorButton> {
             margin: EdgeInsets.only(bottom: 5),
             child: Image.asset(
               'assets/images/task.png',
-              color: currentIndex == 1 ? MyColors.blueDark : MyColors.textGrey,
+              color: intIndex == 1 ? MyColors.blueDark : MyColors.textGrey,
             ),
           ),
           label: 'Task',

@@ -55,6 +55,7 @@ class NoTask extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: PlusButton(),
       bottomNavigationBar: NavigatorButton(
+        context: context,
         intIndex: intIndex,
       ),
     );

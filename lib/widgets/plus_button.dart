@@ -1,14 +1,17 @@
 import 'package:creative_app/constantes/colors.dart';
 import 'package:creative_app/constantes/styles.dart';
+import 'package:creative_app/widgets/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class PlusButton extends StatelessWidget {
-  const PlusButton({Key? key}) : super(key: key);
+  MyShowModelBottomSheet myShowModelBottomSheet = MyShowModelBottomSheet();
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      onPressed: () {},
+      onPressed: () {
+        myShowModelBottomSheet.myShowBottomSheet(context);
+      },
       backgroundColor: MyColors.trashRed,
       elevation: 5,
       child: Container(
@@ -17,10 +20,6 @@ class PlusButton extends StatelessWidget {
             'assets/images/fab-add.png',
           ),
         ),
-        // child: Icon(
-        //   Icons.add,
-        //   size: 30,
-        // ),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
