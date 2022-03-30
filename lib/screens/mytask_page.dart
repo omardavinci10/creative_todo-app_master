@@ -12,8 +12,8 @@ class MyTaskPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(90),
-        child: myAppBar(),
+        preferredSize: Size.fromHeight(210),
+        child: appBarNotification(context),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,

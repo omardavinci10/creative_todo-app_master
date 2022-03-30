@@ -1,3 +1,4 @@
+import 'package:creative_app/widgets/my_appbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +11,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.search),
-          onPressed: () {},
-        ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(210),
+        child: appBarNotification(context),
       ),
       body: Column(),
     );
