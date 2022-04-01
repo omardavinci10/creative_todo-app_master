@@ -1,11 +1,25 @@
 import 'package:creative_app/constantes/styles.dart';
+import 'package:creative_app/sqflite.dart';
 import 'package:creative_app/widgets/my_appbar.dart';
 import 'package:creative_app/widgets/navigator_button.dart';
 import 'package:creative_app/widgets/plus_button.dart';
 import 'package:flutter/material.dart';
 
-class NoTask extends StatelessWidget {
+class NoTask extends StatefulWidget {
+  @override
+  State<NoTask> createState() => _NoTaskState();
+}
+
+class _NoTaskState extends State<NoTask> {
   var intIndex = 0;
+  SqfLiteApp sqfLiteApp = SqfLiteApp();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    sqfLiteApp.getDatabase();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

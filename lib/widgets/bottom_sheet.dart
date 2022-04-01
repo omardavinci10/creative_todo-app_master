@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class MyShowModelBottomSheet {
   var textController = TextEditingController();
+  bool isCheck = false;
 
   myShowBottomSheet(BuildContext context) {
     showModalBottomSheet(
@@ -108,119 +109,35 @@ class MyShowModelBottomSheet {
                             scrollDirection: Axis.horizontal,
                             shrinkWrap: true,
                             children: [
-                              Center(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: MyColors.yellowAccent,
-                                        shape: BoxShape.circle,
-                                      ),
-                                      margin: EdgeInsets.only(right: 4),
-                                      height: 10,
-                                      width: 10,
-                                    ),
-                                    Container(
-                                      child: Text('Personal'),
-                                      margin: EdgeInsets.only(right: 10),
-                                    ),
-                                  ],
-                                ),
+                              inkWell(
+                                MyColors.yellowAccent,
+                                'Personal',
+                                MyColors.yellowShadow,
                               ),
-                              Center(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: MyColors.greenIcon,
-                                        shape: BoxShape.circle,
-                                      ),
-                                      margin: EdgeInsets.only(right: 4),
-                                      height: 10,
-                                      width: 10,
-                                    ),
-                                    Container(
-                                      child: Text('Work'),
-                                      margin: EdgeInsets.only(right: 10),
-                                    ),
-                                  ],
-                                ),
+                              inkWell(
+                                MyColors.greenIcon,
+                                'Work',
+                                MyColors.greenShadow,
                               ),
-                              Center(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: MyColors.purpleIcon,
-                                        shape: BoxShape.circle,
-                                      ),
-                                      margin: EdgeInsets.only(right: 4),
-                                      height: 10,
-                                      width: 10,
-                                    ),
-                                    Container(
-                                      child: Text('Meeting'),
-                                      margin: EdgeInsets.only(right: 10),
-                                    ),
-                                  ],
-                                ),
+                              inkWell(
+                                MyColors.purpleIcon,
+                                'Meeting',
+                                MyColors.purpleShadow,
                               ),
-                              Center(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: MyColors.blueIcon,
-                                        shape: BoxShape.circle,
-                                      ),
-                                      margin: EdgeInsets.only(right: 4),
-                                      height: 10,
-                                      width: 10,
-                                    ),
-                                    Container(
-                                      child: Text('Study'),
-                                      margin: EdgeInsets.only(right: 10),
-                                    ),
-                                  ],
-                                ),
+                              inkWell(
+                                MyColors.blueIcon,
+                                'Study',
+                                MyColors.blueShadow,
                               ),
-                              Center(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: MyColors.orangeIcon,
-                                        shape: BoxShape.circle,
-                                      ),
-                                      margin: EdgeInsets.only(right: 4),
-                                      height: 10,
-                                      width: 10,
-                                    ),
-                                    Container(
-                                      child: Text('Shopping'),
-                                      margin: EdgeInsets.only(right: 10),
-                                    ),
-                                  ],
-                                ),
+                              inkWell(
+                                MyColors.orangeIcon,
+                                'Shopping',
+                                MyColors.orangeBackground,
                               ),
-                              Center(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: MyColors.deepPurpleIcon,
-                                        shape: BoxShape.circle,
-                                      ),
-                                      margin: EdgeInsets.only(right: 4),
-                                      height: 10,
-                                      width: 10,
-                                    ),
-                                    Container(
-                                      child: Text('Free Time'),
-                                      margin: EdgeInsets.only(right: 10),
-                                    ),
-                                  ],
-                                ),
+                              inkWell(
+                                MyColors.deepPurpleIcon,
+                                'Free Time',
+                                MyColors.deepPurpleBackground,
                               ),
                             ],
                           ),
@@ -307,108 +224,39 @@ class MyShowModelBottomSheet {
   }
 }
 
-//                         ),
-//                         SizedBox(height: 10),
-//                         Container(
-//                           width: MediaQuery.of(context).size.width / 1.2,
-//                           height: 150,
-//                           child: ListView.builder(
-//                             itemCount: subTasks.length,
-//                             itemBuilder: (BuildContext context, int index) {
-//                               return Container(
-//                                 margin: const EdgeInsets.only(bottom: 5.0),
-//                                 child: TextFormField(
-//                                   initialValue: subTasks[index],
-//                                   autofocus: false,
-//                                   style: TextStyle(
-//                                     fontSize: 18,
-//                                     fontStyle: FontStyle.normal,
-//                                     color: Colors.grey[850],
-//                                   ),
-//                                   decoration: InputDecoration(
-//                                     border: InputBorder.none,
-//                                     enabledBorder: OutlineInputBorder(
-//                                       borderSide: BorderSide(
-//                                         color: Colors.grey,
-//                                         width: 1.0,
-//                                       ),
-//                                       borderRadius: BorderRadius.all(
-//                                         Radius.circular(50.0),
-//                                       ),
-//                                     ),
-//                                     focusedBorder: OutlineInputBorder(
-//                                       borderSide: BorderSide(
-//                                         color: Colors.blue,
-//                                         width: 2.0,
-//                                       ),
-//                                       borderRadius: BorderRadius.all(
-//                                         Radius.circular(50.0),
-//                                       ),
-//                                     ),
-//                                   ),
-//                                 ),
-//                               );
-//                             },
-//                           ),
-//                         ),
-//                         SizedBox(height: 25),
-//                         RaisedButton(
-//                           onPressed: () {
-//                             Navigator.pushReplacement(
-//                               context,
-//                               MaterialPageRoute(builder: (context) => Home()),
-//                             );
-//                             // Navigator.pop(context);
-//                           },
-//                           textColor: Colors.white,
-//                           padding: const EdgeInsets.all(0.0),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(8.0),
-//                           ),
-//                           child: Container(
-//                             width: MediaQuery.of(context).size.width / 1.2,
-//                             height: 60,
-//                             decoration: const BoxDecoration(
-//                               gradient: LinearGradient(
-//                                 colors: <Color>[
-//                                   CustomColors.BlueLight,
-//                                   CustomColors.BlueDark,
-//                                 ],
-//                               ),
-//                               borderRadius: BorderRadius.all(
-//                                 Radius.circular(8.0),
-//                               ),
-//                               boxShadow: [
-//                                 BoxShadow(
-//                                   color: CustomColors.BlueShadow,
-//                                   blurRadius: 2.0,
-//                                   spreadRadius: 1.0,
-//                                   offset: Offset(0.0, 0.0),
-//                                 ),
-//                               ],
-//                             ),
-//                             padding:
-//                             const EdgeInsets.fromLTRB(20, 10, 20, 10),
-//                             child: Center(
-//                               child: const Text(
-//                                 'Add task',
-//                                 style: TextStyle(
-//                                     fontSize: 18,
-//                                     fontWeight: FontWeight.w500),
-//                               ),
-//                             ),
-//                           ),
-//                         ),
-//                         SizedBox(height: 20),
-//                       ],
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-//       );
-//     },
-//   );
-// }
+Widget inkWell(Color color, String text, Color myColor) {
+  return InkWell(
+    //TODO:CHECK
+    onTap: () {},
+    child: Container(
+      // padding: EdgeInsets.symmetric(horizontal: 20),
+      width: 120,
+      height: 120,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: [boxShadow(myColor)]),
+      child: Center(
+        child: Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: color,
+                shape: BoxShape.circle,
+              ),
+              margin: EdgeInsets.only(right: 4),
+              height: 10,
+              width: 10,
+            ),
+            Container(
+              child: Text(
+                text,
+                style: TextStyle(fontSize: 20),
+              ),
+              margin: EdgeInsets.only(right: 20),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}

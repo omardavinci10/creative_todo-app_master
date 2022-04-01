@@ -41,12 +41,10 @@ class OnBoarding extends StatelessWidget {
                 flex: 1,
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NoTask(),
-                      ),
-                    );
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (context) => NoTask()),
+                        (route) => false);
                   },
                   textColor: Colors.white,
                   child: Container(
