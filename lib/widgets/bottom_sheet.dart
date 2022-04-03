@@ -1,10 +1,11 @@
 import 'package:creative_app/constantes/colors.dart';
 import 'package:creative_app/constantes/styles.dart';
+import 'package:creative_app/widgets/ink_bottom.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyShowModelBottomSheet {
   var textController = TextEditingController();
-  bool isCheck = false;
 
   myShowBottomSheet(BuildContext context) {
     showModalBottomSheet(
@@ -227,35 +228,36 @@ class MyShowModelBottomSheet {
 Widget inkWell(Color color, String text, Color myColor) {
   return InkWell(
     //TODO:CHECK
-    onTap: () {},
-    child: Container(
-      // padding: EdgeInsets.symmetric(horizontal: 20),
-      width: 120,
-      height: 120,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [boxShadow(myColor)]),
-      child: Center(
-        child: Row(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                color: color,
-                shape: BoxShape.circle,
-              ),
-              margin: EdgeInsets.only(right: 4),
-              height: 10,
-              width: 10,
+    onTap: () {
+      InkBottom();
+    },
+    // child: Container(
+    //     // padding: EdgeInsets.symmetric(horizontal: 20),
+    //     width: 120,
+    //     height: 120,
+    //     decoration: BoxDecoration(
+    //         borderRadius: BorderRadius.circular(10),
+    //         boxShadow: [boxShadow(myColor)]),
+    child: Center(
+      child: Row(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.circle,
             ),
-            Container(
-              child: Text(
-                text,
-                style: TextStyle(fontSize: 20),
-              ),
-              margin: EdgeInsets.only(right: 20),
+            margin: EdgeInsets.only(right: 4),
+            height: 10,
+            width: 10,
+          ),
+          Container(
+            child: Text(
+              text,
+              style: TextStyle(fontSize: 20),
             ),
-          ],
-        ),
+            margin: EdgeInsets.only(right: 20),
+          ),
+        ],
       ),
     ),
   );
