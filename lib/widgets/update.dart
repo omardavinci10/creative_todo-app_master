@@ -7,13 +7,13 @@ class UpdateScreen extends StatefulWidget {
   final title;
   late final time;
   late final date;
-  late final type;
+  late final state;
   late final id;
 
   UpdateScreen(
       {required this.title,
       required this.date,
-      required this.type,
+      required this.state,
       required this.time,
       required this.id});
 
@@ -33,7 +33,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
     titleController.text = widget.title;
     timeController.text = widget.time;
     dataController.text = widget.date;
-    stateController.text = widget.type;
+    stateController.text = widget.state;
     super.initState();
   }
 
@@ -49,6 +49,22 @@ class _UpdateScreenState extends State<UpdateScreen> {
           children: [
             Column(
               children: [
+                TextFormField(
+                  controller: titleController,
+                  decoration: InputDecoration(hintText: 'enter title'),
+                ),
+                TextFormField(
+                  controller: dataController,
+                  decoration: InputDecoration(hintText: 'enter date'),
+                ),
+                TextFormField(
+                  controller: timeController,
+                  decoration: InputDecoration(hintText: 'enter time'),
+                ),
+                TextFormField(
+                  controller: stateController,
+                  decoration: InputDecoration(hintText: 'enter state'),
+                ),
                 SizedBox(
                   height: 10,
                 ),
@@ -59,7 +75,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                     title= "${titleController.text}",
                     date="${dataController.text}",
                     time="${timeController.text}",
-                    type="${stateController.text}"
+                    state="${stateController.text}"
                     WHERE id=${widget.id}
                     ''');
                     if (response > 0) {

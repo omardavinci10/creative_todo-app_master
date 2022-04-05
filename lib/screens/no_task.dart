@@ -12,13 +12,6 @@ class NoTask extends StatefulWidget {
 
 class _NoTaskState extends State<NoTask> {
   var intIndex = 0;
-  SqfLiteApp sqfLiteApp = SqfLiteApp();
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    sqfLiteApp.getDatabase();
-  }
 
   @override
   Widget build(BuildContext context) {

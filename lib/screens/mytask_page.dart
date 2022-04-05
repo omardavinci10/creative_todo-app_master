@@ -35,246 +35,18 @@ class MyTaskPage extends StatelessWidget {
             SliverGrid.count(
               crossAxisCount: 2,
               children: [
-                Container(
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 65,
-                          width: 65,
-                          child: Image.asset(
-                            'assets/images/icon-user.png',
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: MyColors.yellowBackground),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Prsonal',
-                          style: title,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          '24 Task',
-                          style: subTitle,
-                        ),
-                      ],
-                    ),
-                  ),
-                  height: 150,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [boxShadow(MyColors.greyBorder)],
-                  ),
-                ),
-                Container(
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 65,
-                          width: 65,
-                          child: Image.asset(
-                            'assets/images/icon-briefcase.png',
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: MyColors.yellowBackground),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Work',
-                          style: title,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          '24 Task',
-                          style: subTitle,
-                        ),
-                      ],
-                    ),
-                  ),
-                  height: 150,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [boxShadow(MyColors.greyBorder)],
-                  ),
-                ),
-                Container(
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 65,
-                          width: 65,
-                          child: Image.asset(
-                            'assets/images/icon-presentation.png',
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: MyColors.yellowBackground),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Meeting',
-                          style: title,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          '24 Task',
-                          style: subTitle,
-                        ),
-                      ],
-                    ),
-                  ),
-                  height: 150,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [boxShadow(MyColors.greyBorder)],
-                  ),
-                ),
-                Container(
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 65,
-                          width: 65,
-                          child: Image.asset(
-                            'assets/images/icon-molecule.png',
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: MyColors.yellowBackground),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Study',
-                          style: title,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          '24 Task',
-                          style: subTitle,
-                        ),
-                      ],
-                    ),
-                  ),
-                  height: 150,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [boxShadow(MyColors.greyBorder)],
-                  ),
-                ),
-                Container(
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 65,
-                          width: 65,
-                          child: Image.asset(
-                            'assets/images/icon-shopping-basket.png',
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: MyColors.yellowBackground),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Shopping',
-                          style: title,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          '24 Task',
-                          style: subTitle,
-                        ),
-                      ],
-                    ),
-                  ),
-                  height: 150,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [boxShadow(MyColors.greyBorder)],
-                  ),
-                ),
-                Container(
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 65,
-                          width: 65,
-                          child: Image.asset(
-                            'assets/images/icon-confetti.png',
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: MyColors.yellowBackground),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Free Time',
-                          style: title,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          '24 Task',
-                          style: subTitle,
-                        ),
-                      ],
-                    ),
-                  ),
-                  height: 150,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [boxShadow(MyColors.greyBorder)],
-                  ),
-                ),
+                boxContainer(
+                    'assets/images/icon-user.png', 'Personal', '24 Task'),
+                boxContainer(
+                    'assets/images/icon-briefcase.png', 'Work', '24 Task'),
+                boxContainer('assets/images/icon-presentation.png', 'Meeting',
+                    '24 Task'),
+                boxContainer(
+                    'assets/images/icon-molecule.png', 'Study', '24 Task'),
+                boxContainer('assets/images/icon-shopping-basket.png',
+                    'Shopping', '24 Task'),
+                boxContainer(
+                    'assets/images/icon-confetti.png', 'Free Time', '24 Task'),
               ],
             ),
           ],
@@ -288,4 +60,47 @@ class MyTaskPage extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget boxContainer(String image, String text, String subTitleText) {
+  return Container(
+    child: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            height: 65,
+            width: 65,
+            child: Image.asset(
+              image,
+            ),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: MyColors.yellowBackground),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Text(
+            text,
+            style: title,
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Text(
+            subTitleText,
+            style: subTitle,
+          ),
+        ],
+      ),
+    ),
+    height: 150,
+    margin: EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(10),
+      boxShadow: [boxShadow(MyColors.greyBorder)],
+    ),
+  );
 }

@@ -4,13 +4,18 @@ import 'package:creative_app/widgets/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class PlusButton extends StatelessWidget {
-  MyShowModelBottomSheet myShowModelBottomSheet = MyShowModelBottomSheet();
-
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () {
-        myShowModelBottomSheet.myShowBottomSheet(context);
+        showModalBottomSheet(
+          backgroundColor: Colors.transparent,
+          isScrollControlled: true,
+          context: context,
+          builder: (BuildContext context) => Add_Task_Screen(
+            textController: TextEditingController(),
+          ),
+        );
       },
       backgroundColor: MyColors.trashRed,
       elevation: 5,

@@ -1,5 +1,5 @@
-import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 class SqfLiteApp {
   Database? database;
@@ -17,7 +17,7 @@ class SqfLiteApp {
     String databasesPath = await getDatabasesPath();
     String path = join(databasesPath, 'todo.db');
     database = await openDatabase(path,
-        version: 1, onCreate: _onCreateFunction, onUpgrade: _onUpgradeFunction);
+        version: 2, onCreate: _onCreateFunction, onUpgrade: _onUpgradeFunction);
     return database!;
   }
 
@@ -31,12 +31,12 @@ class SqfLiteApp {
         //string title
         //string date
         //string time
-        //string state
+        //string type
         '''CREATE TABLE tasks (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
         title TEXT,
         date TEXT ,
         time TEXT,
-        state TEXT)''');
+        type TEXT)''');
     print('database created');
   }
 
